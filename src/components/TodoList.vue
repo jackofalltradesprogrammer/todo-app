@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <div>
         <ul>
@@ -19,3 +20,4 @@ export default {
 
 </style>
 
+/* eslint-disable */
