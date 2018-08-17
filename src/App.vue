@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    // Render the components
-    // TodoList
+     <!-- Render the components -->
+    <!-- TodoList -->
     <todo-list></todo-list>
   </div>
 </template>
@@ -12,9 +12,34 @@ import TodoList from './components/TodoList';
 export default {
   name: 'App',
   components: {
-    TodoList, // Add a reference to the the component here
+    TodoList, 
+    // Add a reference to the the component here
   },
+
+  // data function makes data available to the template
+  data()  {
+    return {
+      todos: [{
+        title: 'Todo A',
+        project: 'Project A',
+        done: false
+      }, {
+        title: 'Todo B',
+        project: 'Project B',
+        done: false
+      }, {
+        title: 'Todo C',
+        project: 'Project C',
+        done: false
+      }, {
+        title: 'Todo D',
+        project: 'Project D',
+        done: false
+      }],
+    };
+  }
 };
+
 </script>
 
 <style>
