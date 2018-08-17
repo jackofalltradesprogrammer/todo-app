@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div id="app">
      <!-- Render the components -->
@@ -26,7 +27,7 @@ export default {
       }, {
         title: 'Todo B',
         project: 'Project B',
-        done: false,
+        done: true,
       }, {
         title: 'Todo C',
         project: 'Project C',
