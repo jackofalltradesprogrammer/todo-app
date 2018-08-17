@@ -1,11 +1,9 @@
 /* eslint-disable */
 <template>
     <div>
-        <ul>
-            <li> Todo A </li>
-            <li> Todo B </li>
-            <li> Todo C </li>
-        </ul>
+        <p>Complete Tasts: {{todos.filter(todo => {return todo.done == true}).length}}</p>
+        <p>Pending Tasts: {{todos.filter(todo => {return todo.done == false}).length}}</p>
+        
     </div>
 </template>
 
