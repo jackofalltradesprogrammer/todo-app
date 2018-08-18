@@ -7,18 +7,18 @@
             <div class="content">
                 <div class="ui form">
                     <div class="field">
-                        <label>Title</label>>
+                        <label>Title</label>
                         <input v-model="titleText" type="text" ref="title" defaultValue="">
                     </div>
                     <div class="field">
-                        <label>Project</label>>
-                        <input type="text" ref="title" defaultValue="">
+                        <label>Project</label>
+                        <input v-model= "projectText" type="text" ref="title" defaultValue="">
                     </div>
                     <div class="ui two button attached butttons">
                         <button class="ui basic blue button" v-on:click="sendForm()">
                             Create
                         </button>
-                        <button class="ui basic red button" v-on:click="closeForm">
+                        <button class="ui basic red button" v-on:click="closeForm()">
                             Cancel
                         </button>
                     </div>
@@ -50,7 +50,8 @@ export default {
             if (this.titleText.length > 0 && this.projectText.length > 0) {
                 const title = this.titleText;
                 const project = this.projectText;
-                this.$emit('create-todo', {
+                console.log(title + " " + project);
+                this.$emit('add-todo', {
                     title,
                     project,
                     done: false,
