@@ -3,8 +3,13 @@
   <div id="app">
      <!-- Render the components -->
     <!-- TodoList -->
-    <todo-list v-bind:todos="todos"></todo-list>
-    <create-todo v-on:add-todo="addTodo"></create-todo>
+    <h1 class="ui dividing centered header">Vue.js Todo App </h1>
+    <div class="ui three column centered grid">
+      <div class="column">
+        <todo-list v-bind:todos="todos"></todo-list>
+        <create-todo v-on:add-todo="addTodo"></create-todo>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -33,10 +38,6 @@ export default {
       }, {
         title: 'Todo C',
         project: 'Project C',
-        done: false,
-      }, {
-        title: 'Todo D',
-        project: 'Project D',
         done: false,
       }],
     };

@@ -1,5 +1,5 @@
 <template>
-    <div class="ui basic content center alighned segment">
+    <div class="ui basic content center aligned segment">
         <button class="ui basic button icon" v-on:click="openForm" v-show="!isCreating">
             <i class='plus icon'></i>
         </button>
@@ -50,7 +50,6 @@ export default {
             if (this.titleText.length > 0 && this.projectText.length > 0) {
                 const title = this.titleText;
                 const project = this.projectText;
-                console.log(title + " " + project);
                 this.$emit('add-todo', {
                     title,
                     project,
